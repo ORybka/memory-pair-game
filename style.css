@@ -1,0 +1,157 @@
+/****** BASE RESET ******/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+}
+
+li {
+  list-style-type: none;
+}
+
+/****** FONTS ******/
+@font-face {
+  font-family: 'game_of_thronesregular';
+  src: url("assets/fonts/game-of-thrones-webfont.woff2") format("woff2"), url("assets/fonts/game-of-thrones-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-family: 'game_of_thronesregular', sans-serif;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+.main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  background-color: #9798df;
+}
+
+.title {
+  margin-top: 5rem;
+}
+
+.cards-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+  max-width: 50rem;
+  margin-top: 2rem;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.card {
+  background-color: #548d55;
+  background-image: url(assets/back.jfif);
+  background-position: center;
+  background-size: cover;
+  width: 9rem;
+  height: 12rem;
+  margin: 0.7rem;
+  text-align: center;
+  padding-top: 4.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  color: yellow;
+}
+
+.card:hover {
+  background-color: #174d18;
+}
+
+footer {
+  font-family: 'game_of_thronesregular';
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80%;
+  margin: 0.5rem 0 1rem;
+}
+
+footer .footer-info {
+  height: 100%;
+  width: 200%;
+  padding: 1rem 0;
+  background-color: var(--background);
+  border-radius: 0.5rem;
+  text-align: center;
+  line-height: 1.5rem;
+}
+
+footer .footer-info .github-link {
+  color: black;
+}
+
+footer .footer-info .github-link:hover {
+  color: #174d18;
+}
+/*# sourceMappingURL=style.css.map */
