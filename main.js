@@ -1,38 +1,24 @@
-const cards = ['arya', 'cercei', 'daenerys', 'hodor', 'jamie', 'jon-snow', 'melissandre', 'sansa', 'tyrion', 'unella'];
-cards.sort(() => 0.5 - Math.random());
+const cards = ['arya', 'cercei', 'daenerys', 'hodor', 'jamie', 'jon-snow', 'melissandre', 'tyrion'];
+const shuffledCards = [...cards, ...cards];
+shuffledCards.sort(() => 0.5 - Math.random());
 
-let row;
-let card;
-const rowNum = 4;
-const colNum = 5;
-const container = document.querySelector('.cards-container');
-
-function createRows() {
-  row = document.createElement('div');
-  row.className = 'row';
-  container.appendChild(row);
-}
+const container = document.querySelector('.all-cards-container');
 
 function createCards() {
-  card = document.createElement('div');
-  card.className = 'card';
-  row.appendChild(card);
-}
-
-function addImages() {
-  cards.forEach((el) => {
-    card.style.backgroundImage = `url("assets/cards/${el}.jfif")`;
+  shuffledCards.forEach((el) => {
+    const card = document.createElement('div');
+    card.className = 'card-container';
+    card.setAttribute('onclick', "this.classList.toggle('hover')");
+    card.innerHTML = `
+      <div class="flipper">
+        <div class="front"></div>
+        <div class="back">
+          <img src="assets/cards/${el}.jfif" alt="card" class="card-image"/>
+        </div>
+      </div>  
+    `;
+    container.append(card);
   });
 }
 
-function addCards() {
-  for (let i = 0; i < rowNum; i++) {
-    createRows();
-    for (let j = 0; j < colNum; j++) {
-      createCards();
-      addImages();
-    }
-  }
-}
-
-addCards();
+createCards();
