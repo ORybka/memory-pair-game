@@ -87,6 +87,7 @@ function addCat() {
       rightCat.animate(
         [
           { opacity: '0', right: '20%' },
+          { opacity: '0.4', right: '23%', width: '20rem' },
           { opacity: '0.5', right: '25%', width: '20rem' },
           { opacity: '0', right: '20%' },
         ],
@@ -100,6 +101,7 @@ function addCat() {
       leftCat.animate(
         [
           { opacity: '0', left: '20%' },
+          { opacity: '0.4', left: '23%', width: '20rem' },
           { opacity: '0.5', left: '25%', width: '20rem' },
           { opacity: '0', left: '20%' },
         ],
