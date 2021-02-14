@@ -82,12 +82,40 @@ function removePair() {
 }
 
 function addCat() {
-  if (previousCat === '') {
+  if (window.matchMedia('(min-width: 768px)').matches) {
+    if (previousCat === '') {
+      rightCat.animate(
+        [
+          { opacity: '0', right: '20%' },
+          { opacity: '0.5', right: '25%', width: '20rem' },
+          { opacity: '0', right: '20%' },
+        ],
+        {
+          duration: DELAY * 4,
+          easing: 'ease-in-out',
+        }
+      );
+      previousCat = 'rightCat';
+    } else if (previousCat !== '') {
+      leftCat.animate(
+        [
+          { opacity: '0', left: '20%' },
+          { opacity: '0.5', left: '25%', width: '20rem' },
+          { opacity: '0', left: '20%' },
+        ],
+        {
+          duration: DELAY * 4,
+          easing: 'ease-in-out',
+        }
+      );
+      previousCat = '';
+    }
+  } else if (previousCat === '') {
     rightCat.animate(
       [
-        { opacity: '0', right: '20%' },
-        { opacity: '0.5', right: '25%', width: '20rem' },
-        { opacity: '0', right: '20%' },
+        { opacity: '0', right: '0' },
+        { opacity: '0.5', right: '0', width: '15rem' },
+        { opacity: '0', right: '0' },
       ],
       {
         duration: DELAY * 4,
@@ -98,9 +126,9 @@ function addCat() {
   } else if (previousCat !== '') {
     leftCat.animate(
       [
-        { opacity: '0', left: '20%' },
-        { opacity: '0.5', left: '25%', width: '20rem' },
-        { opacity: '0', left: '20%' },
+        { opacity: '0', left: '0' },
+        { opacity: '0.5', left: '0', width: '15rem' },
+        { opacity: '0', left: '0' },
       ],
       {
         duration: DELAY * 4,
