@@ -64,7 +64,6 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
   background-color: color(background);
 }
 
@@ -82,6 +81,59 @@ html {
   }
 }
 
+.won-message {
+  display: none;
+  position: absolute;
+  top: 20%;
+  height: 70vh;
+  width: auto;
+  opacity: 0;
+  transition: all 0.5s ease-in;
+
+  .col {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    height: 7rem;
+    width: 20rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+  }
+}
+
+.won-image {
+  height: 100%;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.won-text {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.new-game {
+  display: block;
+  height: 2.5rem;
+  width: 8rem;
+  background-color: color(background);
+  text-align: center;
+  margin: 1rem auto 0;
+  padding-top: 0.7rem;
+  color: color(text);
+  letter-spacing: 1px;
+  overflow: hidden;
+  border-radius: 3px;
+  box-shadow: 0 12px 24px 0 rgba(255, 255, 255, 0.2);
+  border: 0;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: color(link);
+  }
+}
+
 .all-cards-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -89,6 +141,8 @@ html {
   width: 100%;
   height: 100%;
   margin: 0 auto;
+  opacity: 1;
+  transition: all 0.5s ease-in;
 }
 
 .card-container {
