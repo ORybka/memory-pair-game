@@ -69,7 +69,17 @@ html {
 }
 
 .title {
-  margin: 3rem 0 2rem;
+  margin: 3rem 0 1.5rem;
+}
+
+.moves {
+  margin: 0.5rem 0;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.moves strong {
+  font-size: 1.5rem;
 }
 
 .all-cards-container {

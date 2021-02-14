@@ -1,5 +1,5 @@
 let cardPairArray = [];
-let checkedPairs = 0;
+let checkedPairs = 1;
 const DELAY = 800;
 const ANIMATION_DELAY = 400;
 const cardsContainer = document.querySelector('.all-cards-container');
@@ -31,11 +31,11 @@ function createCards() {
 
 function openCard({ target }) {
   const clickedCard = target.closest('.card-container');
+  movesNumber();
 
   if (clickedCard && !clickedCard.classList.contains('flipped')) {
     clickedCard.classList.add('flipped');
     cardPairArray.push(clickedCard);
-    ifWon();
   }
 
   if (cardPairArray.length === 2) {
@@ -51,7 +51,9 @@ function openCard({ target }) {
     setTimeout(() => {
       addClick();
     }, DELAY);
+    checkedPairs++;
   }
+  ifWon();
 }
 
 function flipBack() {
@@ -60,7 +62,6 @@ function flipBack() {
       card.classList.remove('flipped');
     });
     cardPairArray = [];
-    checkedPairs++;
   }, DELAY);
 }
 
@@ -70,7 +71,6 @@ function removePair() {
       card.classList.add('hidden');
     });
     cardPairArray = [];
-    checkedPairs++;
   }, DELAY);
 }
 
@@ -80,6 +80,10 @@ function addAnimation() {
     image.parentNode.removeChild(image);
     card.querySelector('.back').classList.add('fire');
   });
+}
+
+function movesNumber() {
+  document.querySelector('.moves').innerHTML = `Number of moves is <strong>${checkedPairs}</strong>`;
 }
 
 function ifWon() {
