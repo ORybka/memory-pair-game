@@ -272,6 +272,13 @@ html {
   transform: scaleX(-1);
 }
 
+@media only screen and (min-width: 768px) {
+  .cat-left,
+  .cat-right {
+    top: 20%;
+  }
+}
+
 footer {
   font-family: 'game_of_thronesregular';
   font-weight: bold;
