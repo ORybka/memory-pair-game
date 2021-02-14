@@ -53,9 +53,33 @@ html {
   color: color(text);
 }
 
-@media screen and (max-width: 500px) {
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 600px) {
   html {
     font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 7px;
   }
 }
 
@@ -160,7 +184,7 @@ html {
 .front,
 .back {
   width: 9rem;
-  height: 12rem;
+  height: 11rem;
 }
 
 .flipper {
@@ -206,7 +230,7 @@ html {
 
 .card-image {
   width: 9rem;
-  height: 12rem;
+  height: 11rem;
   object-fit: cover;
   position: absolute;
   top: 0;
