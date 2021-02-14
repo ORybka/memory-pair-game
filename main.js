@@ -1,10 +1,13 @@
 let cardPairArray = [];
+let previousCat;
 let wonPair = 1;
 let checkedPairs = 1;
 const numberOfPairs = 8;
 const DELAY = 800;
 const cardsContainer = document.querySelector('.all-cards-container');
 const wonMessage = document.querySelector('.won-message');
+const rightCat = document.querySelector('.cat-right');
+const leftCat = document.querySelector('.cat-left');
 const cards = ['arya', 'cercei', 'daenerys', 'hodor', 'jamie', 'jon-snow', 'melissandre', 'tyrion'];
 const shuffledCards = [...cards, ...cards];
 shuffledCards.sort(() => 0.5 - Math.random());
@@ -45,6 +48,7 @@ function openCard({ target }) {
       setTimeout(() => {
         addAnimation();
       }, DELAY / 2);
+      addCat();
       removePair();
     } else {
       flipBack();
@@ -77,6 +81,36 @@ function removePair() {
   ifWon();
 }
 
+function addCat() {
+  if (previousCat === '') {
+    rightCat.animate(
+      [
+        { opacity: '0', right: '20%' },
+        { opacity: '0.5', right: '25%', width: '20rem' },
+        { opacity: '0', right: '20%' },
+      ],
+      {
+        duration: DELAY * 4,
+        easing: 'ease-in-out',
+      }
+    );
+    previousCat = 'rightCat';
+  } else if (previousCat !== '') {
+    leftCat.animate(
+      [
+        { opacity: '0', left: '20%' },
+        { opacity: '0.5', left: '25%', width: '20rem' },
+        { opacity: '0', left: '20%' },
+      ],
+      {
+        duration: DELAY * 4,
+        easing: 'ease-in-out',
+      }
+    );
+    previousCat = '';
+  }
+}
+
 function addAnimation() {
   cardPairArray.forEach((card) => {
     const image = card.querySelector('.card-image');
@@ -90,7 +124,7 @@ function movesNumber() {
 }
 
 function ifWon() {
-  if (wonPair === 1) {
+  if (wonPair === numberOfPairs) {
     setTimeout(() => {
       cardsContainer.style.opacity = '0';
       setTimeout(() => {

@@ -227,6 +227,24 @@ html {
   transition: all 0.5s ease-in;
 }
 
+.cat-left,
+.cat-right {
+  position: absolute;
+  top: 40%;
+  height: 20rem;
+  width: 0;
+  opacity: 1;
+  background-image: url(assets/dragon-cat-removebg.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.cat-right {
+  transform: scaleX(-1);
+}
+
 footer {
   font-family: 'game_of_thronesregular';
   font-weight: bold;
