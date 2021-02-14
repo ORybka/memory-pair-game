@@ -47,7 +47,7 @@ function openCard({ target }) {
     if (cardPairArray[0].dataset.cardValue === cardPairArray[1].dataset.cardValue) {
       setTimeout(() => {
         addAnimation();
-      }, DELAY / 2);
+      }, DELAY);
       addCat();
       removePair();
     } else {
@@ -77,7 +77,7 @@ function removePair() {
     });
     cardPairArray = [];
     wonPair++;
-  }, DELAY);
+  }, DELAY * 2);
   ifWon();
 }
 
