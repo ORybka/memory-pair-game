@@ -104,7 +104,7 @@ function addCat() {
           { opacity: '0', left: '20%' },
         ],
         {
-          duration: DELAY * 3,
+          duration: DELAY * 4,
           easing: 'ease-in-out',
         }
       );
@@ -118,7 +118,7 @@ function addCat() {
         { opacity: '0', right: '0' },
       ],
       {
-        duration: DELAY * 3,
+        duration: DELAY * 4,
         easing: 'ease-in-out',
       }
     );
