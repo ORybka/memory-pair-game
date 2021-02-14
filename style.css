@@ -88,9 +88,10 @@ html {
           perspective: 1000px;
   cursor: pointer;
   margin: 0.3rem;
+  opacity: 1;
 }
 
-.card-container.hover .flipper {
+.card-container.flipped .flipper {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
@@ -160,6 +161,18 @@ html {
   right: 0;
   bottom: 0;
   margin: auto;
+}
+
+.fire {
+  background-image: url("assets/fire.gif");
+  background-position: center;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
 }
 
 footer {
