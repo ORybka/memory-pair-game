@@ -154,7 +154,7 @@ function movesNumber() {
 }
 
 function ifWon() {
-  if (wonPair === 1) {
+  if (wonPair === numberOfPairs) {
     setTimeout(() => {
       cardsContainer.style.display = 'none';
       cardsContainer.style.opacity = '0';
