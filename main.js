@@ -154,7 +154,7 @@ function movesNumber() {
 }
 
 function ifWon() {
-  if (wonPair === numberOfPairs) {
+  if (wonPair === 1) {
     setTimeout(() => {
       cardsContainer.style.display = 'none';
       cardsContainer.style.opacity = '0';
@@ -165,6 +165,7 @@ function ifWon() {
         wonMessage.style.opacity = '1';
         document.querySelector('header').style.opacity = '1';
         document.querySelector('footer').style.opacity = '1';
+        document.querySelector('.main-container').style.overflow = 'hidden';
       }, DELAY / 2);
     }, DELAY * 2);
   }
