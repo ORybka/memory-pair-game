@@ -109,8 +109,8 @@ html {
 
 .won-message {
   display: none;
-  position: absolute;
-  top: 20%;
+  position: relative;
+  top: -10%;
   height: 70vh;
   width: auto;
   opacity: 0;
@@ -119,7 +119,10 @@ html {
   .col {
     position: absolute;
     top: 25%;
-    left: 28%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
     height: 7rem;
     width: 20rem;
     background-color: rgba(0, 0, 0, 0.7);
