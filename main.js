@@ -56,7 +56,7 @@ function openCard({ target }) {
     removeClick();
     setTimeout(() => {
       addClick();
-    }, DELAY);
+    }, DELAY * 2);
     checkedPairs++;
   }
 }
