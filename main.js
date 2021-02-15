@@ -154,13 +154,18 @@ function movesNumber() {
 }
 
 function ifWon() {
-  if (wonPair === numberOfPairs) {
+  if (wonPair === 1) {
     setTimeout(() => {
+      cardsContainer.style.display = 'none';
       cardsContainer.style.opacity = '0';
+      document.querySelector('header').style.opacity = '0';
+      document.querySelector('footer').style.opacity = '0';
       setTimeout(() => {
         wonMessage.style.display = 'block';
         wonMessage.style.opacity = '1';
-      }, DELAY);
+        document.querySelector('header').style.opacity = '1';
+        document.querySelector('footer').style.opacity = '1';
+      }, DELAY / 2);
     }, DELAY * 2);
   }
 }
