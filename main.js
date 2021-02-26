@@ -123,7 +123,15 @@ function addAnimationArray(side, forScreenArray) {
     });
     return forScreenArray;
   }
-  return forScreenArray;
+  if (side === 'right') {
+    forScreenArray.forEach((el) => {
+      if (el.hasOwnProperty('left')) {
+        el.right = el.left;
+        delete el.left;
+      }
+    });
+    return forScreenArray;
+  }
 }
 
 function addCat() {
