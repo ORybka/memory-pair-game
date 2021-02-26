@@ -5,7 +5,6 @@ let checkedPairs = 1;
 const numberOfPairs = 8;
 const DELAY = 800;
 const cardsContainer = document.querySelector('.all-cards-container');
-const mainContainer = document.querySelector('.main-container');
 const header = document.querySelector('header');
 const footer = document.querySelector('footer');
 const wonMessage = document.querySelector('.won-message');
